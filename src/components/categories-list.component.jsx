@@ -2,11 +2,11 @@ import React from 'react';
 
 const CategoriesList = () => {
     return (
-        <div className='bg-yellow-500 h-[100vh] flex flex-col items-center justify-center border-4 border-black'>
+        <div className='bg-yellow-500 h-[130vh] flex flex-col items-center justify-center border-4 border-black'>
 
-            <h2 className="h-14 flex items-center justify-center bg-gray-500 border-4 border-black my-6">Coleccion</h2>
+            <h2 className="h-14 flex items-center justify-center bg-gray-500 border-4 border-black relative bottom-20">Coleccion</h2>
 
-            <div className='bg-yellow-300 h-screen w-[80%] mx-auto border-4 border-black grid grid-cols-2 gap-4 p-4'>
+            <div className='bg-yellow-300 h-screen w-[80%]  mx-auto border-4 border-black grid md:grid-cols-2 gap-4 p-6'>
   
 
                 <div className='bg-yellow-100 border-4 border-black flex items-center justify-center'>
