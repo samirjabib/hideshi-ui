@@ -76,17 +76,29 @@ const Header = () => {
 
                   {/* DESKTOP NAV */}
                 <ul className={`
+                    flex flex-col items-center
+                    w-72 h-screen fixed mt-20 gap-4 p-4
+                    left-0 
+                    bg-[#2b2d42]/90 
+                    font-medium
+                    shadow-2xl text-white top-0 <<
+                    transition-all duration-500 ease-in z-40  
 
-                    z-40
+                    md:flex md:items-center
+                    md:flex-row  md:justify-around
+                    md:mt-0 
+                    md:w-40 md:h-auto
+                    md:static
+                    md:shadow-none
+                    md:bg-[#EDF2F4]
+                    md:text-[#2b2d42]
+                   
                     ${
                         open 
-                            ? 'w-72 h-screen bg-[#2b2d42]/90  mt-16 left-0 flex flex-col items-center gap-4 p-4 shadow-2xl text-white fixed'
-                            : 'hidden'
+                            ? 'left-0'
+                            : 'left-[-40rem]'
                     }
-                
                     
-                    md:flex bg-blue-500 items-center
-
                 
                 `}>
                    {
@@ -96,8 +108,8 @@ const Header = () => {
                             <li key={index} className='text-lg mt-12 md:mt-0'>
                                 <NavLink className='m-16 relative group' path={path}>
                                     {display}
-                                    <span className="absolute -bottom-2 left-1/2 w-0 h-2 bg-[#2b2d42] group-hover:w-1/2 group-hover:transition-all"></span>
-                                    <span className="absolute -bottom-2 right-1/2 w-0 h-2 bg-[#2b2d42] group-hover:w-1/2 group-hover:transition-all"></span>
+                                    <span className={`absolute -bottom-2 left-1/2 w-0 h-2  bg-[#2b2d42] group-hover:w-1/2 group-hover:transition-all ${open ? 'bg-[#ffffff]' : 'bg-[#2b2d42]' }`}></span>
+                                    <span className={`absolute -bottom-2 right-1/2 w-0 h-2 bg-[#2b2d42] group-hover:w-1/2 group-hover:transition-all ${open ? 'bg-[#ffffff]' : 'bg-[#2b2d42]' }`}></span>
                                 </NavLink>
                             </li>
                         )
@@ -106,11 +118,19 @@ const Header = () => {
               
                 </ul>
 
-                <div className={`${
-                    open
-                        ? 'fixed w-full h-screen z-30 bg-black/50 top-20 left-0'
-                        : 'hidden'
-                }`}></div>
+                <div className={
+                `   
+                    md:hidden
+                    ${
+                        open
+                            ? 'fixed w-full h-screen z-30 bg-black/50 top-20 left-0'
+                            : 'hidden'
+                    }
+                `
+
+
+                
+                }></div>
                 
 
                 <div className="flex md:gap-4 cursor-pointer">
