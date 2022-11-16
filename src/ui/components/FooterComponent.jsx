@@ -1,11 +1,9 @@
 import { AiOutlineWhatsApp } from 'react-icons/ai';
 
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <footer className="bg-[#edf2f4] h-[250px] flex justify-around relative">
-
-
 
             <ul className="bg-red-300 w-44  flex items-center justify-center flex-col bg-black/40  text-center">
                 <h2 className="relative bottom-10 uppercase font-semibold">Contacto</h2>
@@ -57,4 +55,3 @@ const Footer = () => {
     );
 };
 
-export default Footer;

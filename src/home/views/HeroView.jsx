@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import heroBackgrounds from "../assets/background-hero";
 import { useState, useEffect, useRef } from "react";
+import { heroBackgrounds } from "../../assets";
 
-const Hero = () => {
+export const Hero = () => {
 
     let count = 0;
     let slideInterlval;
@@ -45,5 +45,3 @@ const Hero = () => {
         </Fragment>
     );
 };
-
-export default Hero;

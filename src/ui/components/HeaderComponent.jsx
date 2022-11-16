@@ -44,7 +44,7 @@ const navLinks = [
 
 
 
-const Header = () => {
+export const Header = () => {
 
 
     const [ open, setOpen ] = useState(false)
@@ -157,4 +157,3 @@ const Header = () => {
     );
 };
 
-export default Header;

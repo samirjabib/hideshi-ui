@@ -1,7 +1,7 @@
 import hideshiHeroOne  from './hideshi-hero-1.jpg'
 
 
-const heroBackgrounds = [
+export const heroBackgrounds = [
     {
         id:1,
         title:'img-one',
@@ -10,5 +10,3 @@ const heroBackgrounds = [
 
 ]
 
-
-export default heroBackgrounds;

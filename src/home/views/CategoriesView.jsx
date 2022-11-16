@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CategoriesList = () => {
+export const CategoriesList = () => {
     
     return (
         <div className='bg-[#EDF2F4] h-[150vh] grid md:grid-cols-2 md:grid-row-2 shadow-2xl'>
@@ -28,5 +28,3 @@ const CategoriesList = () => {
         </div>
     );
 };
-
-export default CategoriesList;
