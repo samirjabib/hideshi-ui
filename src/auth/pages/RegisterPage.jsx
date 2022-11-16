@@ -1,9 +1,5 @@
-
 export const Register = () => {
-    return (
-        <div>
-            <h1>Im the login</h1>
-        </div>
-    );
-};
-
+    return(
+        <h1>Im the register</h1>
+    )
+}
