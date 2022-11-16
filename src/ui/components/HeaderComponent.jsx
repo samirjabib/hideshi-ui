@@ -14,20 +14,13 @@ import Hamburger from "hamburger-react";
 const navLinks = [
     
     {
-        path:'/shop',
-        display:'Tienda',
+        path:'/',
+        display:'Home',
     },
 
     {
         path:'/',
         display:'Coleccion',
-        subLinks:[
-            { display:'anime', path:'/shop/anime'},
-            { display:'roman', path:'/shop/anime'},
-            { display:'greece', path:'/shop/anime'},
-            { display:'oriental', path:'/shop/anime'},
-
-        ]
     },
     
     {
@@ -36,8 +29,13 @@ const navLinks = [
     },
 
     {
-        path:'/login',
+        path:'/auth/login',
         display:'Login',
+    },
+
+    {
+        path:'/auth/register',
+        display:'Register',
     }
 ]
 
@@ -65,7 +63,7 @@ export const Header = () => {
     return (
         <header className=" h-20 flex flex-col justify-center shadow-2xl bg-[#EDF2F4] fixed w-full top-0 z-50 ">
             
-            <nav className="bg-[#EDF2F4] w-full flex justify-between md:justify-around h-16 p-2">
+            <nav className="bg-[#EDF2F4] w-full flex justify-between h-16 p-2">
                 <h2 className="font-semibold md:hidden text-xl md:text-2xl p-2 self-center"><Link to='/'>HIDESHI</Link></h2>
 
         
@@ -83,13 +81,13 @@ export const Header = () => {
                     font-medium
                     shadow-2xl text-white top-0 <<
                     transition-all duration-500 ease-in z-40  
-
                     md:flex md:items-center
                     md:flex-row  md:justify-around
                     md:mt-0 
                     md:w-40 md:h-auto
                     md:static
                     md:shadow-none
+                    md:mx-20
                     md:bg-[#EDF2F4]
                     md:text-[#2b2d42]
                    
@@ -106,10 +104,20 @@ export const Header = () => {
                         const { path, display} = link
                         return(
                             <li key={index} className='text-lg mt-12 md:mt-0'>
-                                <NavLink className='m-16 relative group' path={path}>
-                                    {display}
-                                    <span className={`absolute -bottom-2 left-1/2 w-0 h-2  bg-[#2b2d42] group-hover:w-1/2 group-hover:transition-all ${open ? 'bg-[#ffffff]' : 'bg-[#2b2d42]' }`}></span>
-                                    <span className={`absolute -bottom-2 right-1/2 w-0 h-2 bg-[#2b2d42] group-hover:w-1/2 group-hover:transition-all ${open ? 'bg-[#ffffff]' : 'bg-[#2b2d42]' }`}></span>
+                                <NavLink className='m-16 relative group' to={path}>
+                        
+                                      {display}
+                                   
+                                    <span className={`
+                                        absolute -bottom-2 left-1/2 w-0 h-2  bg-[#2b2d42] group-hover:w-1/2 group-hover:transition-all 
+                                        ${open ? 'bg-[#ffffff]' : 'bg-[#2b2d42]' }`}>
+                                        
+                                    </span>
+                                    <span className={`
+                                        absolute -bottom-2 right-1/2 w-0 h-2 bg-[#2b2d42] group-hover:w-1/2 group-hover:transition-all 
+                                        ${open ? 'bg-[#ffffff]' : 'bg-[#2b2d42]' }`}>
+
+                                    </span>
                                 </NavLink>
                             </li>
                         )

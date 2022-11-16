@@ -3,10 +3,10 @@ import { CategoriesList, Hero } from "../views";
 
 export const Home = () => {
     return (
-        <div>
+        <section>
                 <Hero/>
                 <CategoriesList/>
-        </div>
+        </section>
     );
 };
 
