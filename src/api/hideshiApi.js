@@ -1,7 +1,7 @@
 import axios from 'axios';
+import { getEnvVariables} from '../helpers'
 
-
-const HIDESHI_API_URL = 'http://127.0.0.1:5173/'
+const { HIDESHI_API_URL } = getEnvVariables();
 
 
 const hideshiApi = axios.create({
