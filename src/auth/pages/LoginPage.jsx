@@ -3,16 +3,7 @@ import { useForm } from "../hooks"
     const loginFormFields = {email:'', password:'',}
 
 export const Login = () => {
-
-
     const { onInputChange, onResetForm,  email, password } = useForm({ loginFormFields })
-
-
-    console.log({ email, password})
-
-
-    
-
 
     return(
         <section class="bg-gray-50 min-h-[50rem] flex items-center justify-center">

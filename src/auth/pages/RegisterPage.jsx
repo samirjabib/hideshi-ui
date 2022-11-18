@@ -8,12 +8,8 @@ const registerFormFields = {
 }
 
 
-export const Register = () => {
-
-
-    
+export const Register = () => { 
     const { onInputChange, onResetForm, userName, email, password, confirmPassword } = useForm({ registerFormFields})
-
 
     return(
         <section class="bg-gray-50 min-h-screen flex items-center justify-center relative bottom-9">
